@@ -1,0 +1,26 @@
+[package]
+name = "examples"
+version = "0.12.0-pre.9"
+authors = ["akd contributors"]
+license = "MIT OR Apache-2.0"
+edition = "2021"
+publish = false
+
+
+[[bin]]
+name = "akd-examples"
+path = "src/main.rs"
+bench = false
+doc = false
+
+[features]
+# Collect runtime metrics on db access calls + timing
+runtime_metrics = []
+
+[dependencies]
+
+[dev-dependencies]
+serial_test = "2"
+assert_fs = "1"
+paste = "1"
+wasm-bindgen-test = "0.3"
